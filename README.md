@@ -1,3 +1,7 @@
+# Seafile Client - ARM version
+
+This is a fork of https://github.com/Gronis/docker-seafile-client, modified for ARM. I have only tested this on raspberrypi.
+
 # docker-seafile-client
 Run a seafile client inside docker which can sync files from seafile repositories
 

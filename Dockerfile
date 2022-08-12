@@ -1,8 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update && apt-get install gnupg curl -y && \
-    curl https://linux-clients.seafile.com/seafile.asc -o /usr/share/keyrings/seafile-keyring.asc && \
-    echo deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/bullseye/ stable main | tee /etc/apt/sources.list.d/seafile.list && \
+    echo deb http://deb.debian.org/debian bullseye-backports main >> /etc/apt/sources.list && \
     apt-get update -y && \
     apt-get install -y seafile-cli procps grep && \
     rm -rf /var/lib/apt/lists/* && \
